@@ -20,8 +20,6 @@ void	empile(int *tab, int element, t_push *push)
 		i++;
 		j++;
 	}
-
-	//return(tab2);
 }
 
 

@@ -21,7 +21,7 @@ int main(int ac, char **av)
 	// depile(str);
 	// depile(str);
 	// empile(str);
-	 empile(str, 69,);
+	 empile(str, 69, push);
 	// empile(str);
 	//printf("%d\n",str[2]);
 
