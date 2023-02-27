@@ -28,6 +28,8 @@ void	middle_sort(t_push *push);
 void	choose_algo(t_push *push, int nb);
 void	two_sort(t_push *push);
 void	adult_sort(t_push *push);
+void	moove_midle(t_push *push, int pos);
+int		middle_tri(t_push *push);
 
 
 // mouvement 

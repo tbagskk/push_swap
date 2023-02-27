@@ -32,19 +32,20 @@ int main(int ac, char **av)
 		j++;
 
 	}
-	choose_algo(push, ac - 1);
+	//choose_algo(push, ac - 1);
+	adult_sort(push);
 	
 	
 	//baby_sort(push->a, push);
-	//i = 0;
-	//rra(push);
-	//middle_sort(push);
-	// while (i < push->size_a)
+	i = 0;
+
+
+	// while (i < push->size_b)
 	// {
-	// 	printf("%d\n", push->a[i]);
+	// 	printf("%d\n", push->b[i]);
 	// 	i++;
 	// }
-	//printf("%d\n", push->a[0]);
+	//printf("%d\n", push->b[0]);
 	
 
 }
