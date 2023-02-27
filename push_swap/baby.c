@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int *baby_sort(int nb[])
+void *baby_sort(int nb[], t_push *push)
 {
 	int a;
 	int b;
@@ -10,25 +10,33 @@ int *baby_sort(int nb[])
 	a = nb[0];
 	b = nb[1];
 	c = nb[2];
-
 	if ((a > b) && (a < c))
-		printf("sa\n");
+		sa(push);
 	if ((a > b) && (b > c))
 	{
-		printf("sa\n");
-		printf("rra\n");
+		sa(push);
+		rra(push);
 	}
 	if ((a > c) && (b < c))
-		printf("ra");
+		ra(push);
 	if ((b > c) && (c > a))
 	{
-		printf("sa\n");
-		printf("ra\n");
+		sa(push);
+		ra(push);
 	}
 	if ((b > a) && (a > c))
-		printf("rra\n");
-	
-		
-		
-	return(0);
+		rra(push);
+	return (0);
+}
+
+void two_sort(t_push *push)
+{
+	int	a;
+	int	b;
+
+	a = push->a[0];
+	b = push->a[1];
+
+	if (a > b)
+		sa(push);
 }

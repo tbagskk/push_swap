@@ -5,7 +5,10 @@ SRCS =	main.c \
 		ft_split.c \
 		mouvement.c \
 		other.c \
-		empile.c
+		empile.c \
+		middle.c \
+		choose_algo.c \
+		adult.c
 	
 
 OBJS =	${SRCS:.c=.o}

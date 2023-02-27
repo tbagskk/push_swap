@@ -1,25 +1,55 @@
 #include "push_swap.h"
 
-void	empile(int *tab, int element, t_push *push)
+void	pb(t_push *push)
 {
-	int i;
-	int size;
-	int tmp;
-	int tab2[12];
+	int	i;
+	int	tmp;
 
-	size = ft_strlen(tab);
 	i = 0;
-	int j = 1;
-	
-	push->tab2[0] = element;
-
-
-	while(i < size)
+	push->b[push->size_b] = push->a[0];
+	push->size_b++;
+	push->size_a--;
+	while (i < push->size_b)
 	{
-		push->tab2[j] = tab[i];
+		tmp = push->b[i];
+		push->b[i] = push->b[push->size_b - 1];
+		push->b[push->size_b - 1] = tmp;
 		i++;
-		j++;
 	}
+	i = 0;
+	while (i < push->size_a)
+	{
+		push->a[i] = push->a[i + 1];
+		i++;
+	}
+	ft_putstr("pb");
+	write(1, "\n", 1);
+}
+
+void	pa(t_push *push)
+{
+	int	i;
+	int	tmp;
+
+	i = 0;
+	push->a[push->size_a] = push->b[0];
+	push->size_a++;
+	push->size_b--;
+	while (i < push->size_a)
+	{
+		tmp = push->a[i];
+		push->a[i] = push->a[push->size_a - 1];
+		push->a[push->size_a - 1] = tmp;
+		i++;
+	}
+	i = 0;
+	while (i < push->size_b)
+	{
+		push->b[i] = push->b[i + 1];
+		i++;
+	}
+	ft_putstr("pa");
+	write(1, "\n", 1);
 }
 
 
