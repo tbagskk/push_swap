@@ -8,7 +8,8 @@ SRCS =	main.c \
 		empile.c \
 		middle.c \
 		choose_algo.c \
-		adult.c
+		adult.c \
+		parsing.c
 	
 
 OBJS =	${SRCS:.c=.o}

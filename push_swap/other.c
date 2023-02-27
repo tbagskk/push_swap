@@ -26,3 +26,19 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
+
+int	ft_min(char *str, int len)
+{
+	int	i;
+	int	tmp;
+
+	i = 0;
+	tmp = str[0];
+	while (i < len)
+	{
+		if (str[i] < tmp)
+			tmp = str[i];
+		i++;;
+	}
+	return(ft_min);
+}

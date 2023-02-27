@@ -30,6 +30,9 @@ void	two_sort(t_push *push);
 void	adult_sort(t_push *push);
 void	moove_midle(t_push *push, int pos);
 int		middle_tri(t_push *push);
+void	fill_in_a(t_push *push, int ac, char **av);
+int		verif(t_push *push, char **av);
+int		ft_min(char *str, int len);
 
 
 // mouvement 
