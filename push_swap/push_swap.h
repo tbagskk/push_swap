@@ -14,7 +14,11 @@ typedef struct s_push
 	int		size_a;
 	int		*tab;
 	int		*tab2;
+	int		*cout;
 	int 	tmp_rra;
+	int		nbr_mdl;
+	int		*target;
+	int		target_tmp;
 }			t_push;
 
 
@@ -32,7 +36,9 @@ void	moove_midle(t_push *push, int pos);
 int		middle_tri(t_push *push);
 void	fill_in_a(t_push *push, int ac, char **av);
 int		verif(t_push *push, char **av);
-int		ft_min(char *str, int len);
+int		ft_min(int *str, int len);
+void	ft_strcpy(int *dest, int *tab, int len);
+void 	tri_a_bulles(t_push *push, int taille);
 
 
 // mouvement 

@@ -20,6 +20,9 @@ int main(int ac, char **av)
 	push = malloc(sizeof(t_push));
 	push->a = malloc(sizeof(int) * ac - 1);
 	push->b = malloc(sizeof(int) * ac - 1);
+	push->tab = malloc(sizeof(int) * ac - 1);
+	push->cout = malloc(sizeof(int) * ac - 1);
+	push->target = malloc(sizeof(int) * ac - 1);
 	j = ac - 1;
 
 	 i = 0;
@@ -38,10 +41,10 @@ int main(int ac, char **av)
 	
 	
 	//baby_sort(push->a, push);
-	i = 0;
+	// i = 0;
 	// while (i < push->size_a)
 	// {
-	// 	printf("%d\n", push->a[i]);
+	// 	printf("%d\n", push->target[i]);
 	// 	i++;
 	// }
 	//printf("%d\n", push->a[0]);
