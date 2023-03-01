@@ -41,13 +41,38 @@ int main(int ac, char **av)
 	
 	
 	//baby_sort(push->a, push);
-	// i = 0;
-	// while (i < push->size_a)
-	// {
-	// 	printf("%d\n", push->target[i]);
-	// 	i++;
-	// }
-	//printf("%d\n", push->a[0]);
-	
+	i = 0;
+
+	printf("stack -> A\n");
+	printf("***\n");
+	printf("INDEX 0 - > %d\n", push->a[i]);
+	while (i < push->size_a)
+	{
+		printf("%d\n", push->a[i]);
+		i++;
+	}
+	printf("***\n");
+	i = 0;
+	printf("------\n");
+	printf("stack -> B\n");
+	printf("***\n");
+	printf("INDEX 0 - > %d\n", push->b[i]);
+	while (i < push->size_b)
+	{
+		printf("%d\n", push->b[i]);
+		i++;
+	}
+	i = 0;
+	printf("***\n");
+	printf("------\n");
+	printf("stack -> TARGET-B\n");
+	printf("***\n");
+	printf("INDEX 0 - > %d\n", push->cout[i]);
+	while (i < push->size_b)
+	{
+		printf("%d\n", push->cout[i]);
+		i++;
+	}
+
 
 }
