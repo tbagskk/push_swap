@@ -19,6 +19,8 @@ typedef struct s_push
 	int		nbr_mdl;
 	int		*target;
 	int		target_tmp;
+	int		*max_a;
+	int		position_ideal;
 }			t_push;
 
 
@@ -50,6 +52,8 @@ void	sb(t_push *push);
 void	ss(t_push *push);
 void	ra(t_push *push);
 void	rra(t_push *push);
+void	rb(t_push *push);
+void	rrb(t_push *push);
 
 
 #endif

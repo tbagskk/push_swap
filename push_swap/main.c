@@ -23,6 +23,7 @@ int main(int ac, char **av)
 	push->tab = malloc(sizeof(int) * ac - 1);
 	push->cout = malloc(sizeof(int) * ac - 1);
 	push->target = malloc(sizeof(int) * ac - 1);
+	push->max_a = malloc(sizeof(int) * ac - 1);
 	j = ac - 1;
 
 	 i = 0;
@@ -62,17 +63,6 @@ int main(int ac, char **av)
 		printf("%d\n", push->b[i]);
 		i++;
 	}
-	i = 0;
-	printf("***\n");
-	printf("------\n");
-	printf("stack -> TARGET-B\n");
-	printf("***\n");
-	printf("INDEX 0 - > %d\n", push->cout[i]);
-	while (i < push->size_b)
-	{
-		printf("%d\n", push->cout[i]);
-		i++;
-	}
-
+	
 
 }

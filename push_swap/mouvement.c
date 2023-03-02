@@ -72,5 +72,39 @@ void	rra(t_push *push)
 	write(1, "\n", 1);
 }
 
+void	rb(t_push *push)
+{
+	int tmp;
+	int	i;
+
+	i = 0;
+	tmp = push->b[0];
+	while (i < push->size_b)
+	{
+		push->b[i] = push->b[i +1];
+		i++;
+	}
+	push->b[push->size_b - 1] = tmp;
+	ft_putstr("rb");
+	write(1, "\n", 1);
+}
+
+void	rrb(t_push *push)
+{
+	int tmp;
+	int tmp2;
+	int	i;
+
+	i = push->size_b - 1;
+	tmp = push->b[push->size_b - 1];
+	while (i > 0)
+	{
+		push->b[i] =push->b[i - 1];
+		i--;
+	}
+	push->b[0] = tmp;
+	ft_putstr("rrb");
+	write(1, "\n", 1);
+}
 
 
