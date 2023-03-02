@@ -41,6 +41,8 @@ int		verif(t_push *push, char **av);
 int		ft_min(int *str, int len);
 void	ft_strcpy(int *dest, int *tab, int len);
 void 	tri_a_bulles(t_push *push, int taille);
+void	target_position(t_push *push);
+int position_ideal_a(t_push *push, int index);
 
 
 // mouvement 
