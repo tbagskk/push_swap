@@ -271,7 +271,7 @@ int cout_a_b(t_push *push)
 		tmp_b = cout_a(push->size_a, ide_a, push);
 		//printf("cout de a -> %d\n", tmp_b);
 		tmp_add = tmp_a + tmp_b;
-		printf("cout de a + b -> %d\n", tmp_add);
+		//printf("cout de a + b -> %d\n", tmp_add);
 			//printf("*****\n");
 		if (tmp_add < tmp_min)
 		{
@@ -281,14 +281,14 @@ int cout_a_b(t_push *push)
 		}	
 		i++;
 	}
-printf("tmp_min -> %d\n", tmp_min);
-printf("index min -> %d\n", index_min);
-printf("position ideal -> %d\n", push->position_ideal);
+//printf("tmp_min -> %d\n", tmp_min);
+//printf("index min -> %d\n", index_min);
+//printf("position ideal -> %d\n", push->position_ideal);
 	
 	return (index_min);
 }
 
-void decale_b(t_push *push)
+void decale_a(t_push *push)
 {
 	int i;
 	int k;
@@ -299,7 +299,7 @@ void decale_b(t_push *push)
 	j = push->position_ideal;
 	if (push->position_ideal > k / 2)
 	{
-		printf(" > k\n");
+		//printf(" > k\n");
 		while (j < k)
 		{
 			rra(push);
@@ -309,7 +309,7 @@ void decale_b(t_push *push)
 	j = push->position_ideal;
 	if (push->position_ideal <= k / 2)
 	{
-		printf(" > k\n");
+		//printf(" > k\n");
 		while (j < k)
 		{
 			ra(push);
@@ -318,7 +318,7 @@ void decale_b(t_push *push)
 	}
 }
 
-void decale_to_a(t_push *push, int index)
+void decale_b(t_push *push, int index)
 {
 	int i;
 	int k;
@@ -328,6 +328,7 @@ void decale_to_a(t_push *push, int index)
 	k = push->size_b;
 	if (index > k / 2) //ra
 	{
+		//printf("caca\n");
 		while (i < k)
 		{
 			rrb(push);
@@ -337,27 +338,32 @@ void decale_to_a(t_push *push, int index)
 	i = k / 2;
 	if (index <= k / 2)
 	{
-		
+		//printf("caca <= k\n");
 		while (i > k)
 		{
 			rb(push);
 			i++;
 		}
-	}	
+	}
+	
 }
 void	adult_sort(t_push *push)
 {
 	int tmp = 0;
 	int i = 0;
+	
+
 
 	adult_push_min(push);
 	adult_push_rest(push);
 	baby_sort(push->a, push); 
-	while (i < 3)
+	int k =  push->size_b;
+	while (i < k)
 	{	
 	tmp = cout_a_b(push); //compte le cout de moin cher de a et b reuni + l'index
-	decale_b(push);	
-	decale_to_a(push,tmp);
+	decale_a(push);	
+	decale_b(push,tmp);
+	pa(push);	
 	i++;
 	}
 	

@@ -18,12 +18,13 @@ int main(int ac, char **av)
 	// if(!(verif(push, av)))
 	// 	return (0);
 	push = malloc(sizeof(t_push));
-	push->a = malloc(sizeof(int) * ac - 1);
-	push->b = malloc(sizeof(int) * ac - 1);
-	push->tab = malloc(sizeof(int) * ac - 1);
-	push->cout = malloc(sizeof(int) * ac - 1);
-	push->target = malloc(sizeof(int) * ac - 1);
-	push->max_a = malloc(sizeof(int) * ac - 1);
+	push->a = malloc(sizeof(int) * 
+	ac - 1);
+	push->b = malloc(sizeof(int) * (ac - 1));
+	push->tab = malloc(sizeof(int) * (ac - 1));
+	push->cout = malloc(sizeof(int) * (ac - 1));
+	push->target = malloc(sizeof(int) * (ac - 1));
+	push->max_a = malloc(sizeof(int) * (ac - 1));
 	j = ac - 1;
 
 	 i = 0;
@@ -44,25 +45,25 @@ int main(int ac, char **av)
 	//baby_sort(push->a, push);
 	i = 0;
 
-	printf("stack -> A\n");
-	printf("***\n");
-	printf("INDEX 0 - > %d\n", push->a[i]);
-	while (i < push->size_a)
-	{
-		printf("%d\n", push->a[i]);
-		i++;
-	}
-	printf("***\n");
-	i = 0;
-	printf("------\n");
-	printf("stack -> B\n");
-	printf("***\n");
-	printf("INDEX 0 - > %d\n", push->b[i]);
-	while (i < push->size_b)
-	{
-		printf("%d\n", push->b[i]);
-		i++;
-	}
+	// printf("stack -> A\n");
+	// printf("***\n");
+	// printf("INDEX 0 - > %d\n", push->a[i]);
+	// while (i < push->size_a)
+	// {
+	// 	printf("%d\n", push->a[i]);
+	// 	i++;
+	// }
+	// printf("***\n");
+	// i = 0;
+	// printf("------\n");
+	// printf("stack -> B\n");
+	// printf("***\n");
+	// printf("INDEX 0 - > %d\n", push->b[i]);
+	// while (i < push->size_b)
+	// {
+	// 	printf("%d\n", push->b[i]);
+	// 	i++;
+	// }
 	
 
 }
