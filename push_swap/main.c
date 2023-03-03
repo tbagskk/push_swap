@@ -37,34 +37,6 @@ int main(int ac, char **av)
 		i++;
 		j++;
 	}
-
-	//fill_in_a(push,j,av); // pour remplir la stack A
 	choose_algo(push, ac - 1);
-	//adult_sort(push);
-	
-	
-	//baby_sort(push->a, push);
-	i = 0;
-
-	printf("stack -> A\n");
-	printf("***\n");
-	printf("INDEX 0 - > %d\n", push->a[i]);
-	while (i < push->size_a)
-	{
-		printf("%d\n", push->a[i]);
-		i++;
-	}
-	printf("***\n");
-	i = 0;
-	printf("------\n");
-	printf("stack -> B\n");
-	printf("***\n");
-	printf("INDEX 0 - > %d\n", push->b[i]);
-	while (i < push->size_b)
-	{
-		printf("%d\n", push->b[i]);
-		i++;
-	}
-	
 
 }

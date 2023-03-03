@@ -21,6 +21,10 @@ typedef struct s_push
 	int		target_tmp;
 	int		*max_a;
 	int		position_ideal;
+	//index b a bouger
+	int 	index_b;
+	//index A a bouger
+	int		index_a;
 }			t_push;
 
 
@@ -41,8 +45,12 @@ int		verif(t_push *push, char **av);
 int		ft_min(int *str, int len);
 void	ft_strcpy(int *dest, int *tab, int len);
 void 	tri_a_bulles(t_push *push, int taille);
-void	target_position(t_push *push);
-int position_ideal_a(t_push *push, int index);
+int	ideal_position(t_push *push, int index);
+void cout_de_b(t_push *push);
+int cout_chiffre_ideal(t_push *push, int index);
+int cout_min_a_b(t_push *push);
+void decale_a(t_push *push);
+void decale_b(t_push *push);
 
 
 // mouvement 
