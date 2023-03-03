@@ -40,17 +40,19 @@ void	two_sort(t_push *push);
 void	adult_sort(t_push *push);
 void	moove_midle(t_push *push, int pos);
 int		middle_tri(t_push *push);
-void	fill_in_a(t_push *push, int ac, char **av);
-int		verif(t_push *push, char **av);
 int		ft_min(int *str, int len);
 void	ft_strcpy(int *dest, int *tab, int len);
 void 	tri_a_bulles(t_push *push, int taille);
-int	ideal_position(t_push *push, int index);
-void cout_de_b(t_push *push);
-int cout_chiffre_ideal(t_push *push, int index);
-int cout_min_a_b(t_push *push);
-void decale_a(t_push *push);
-void decale_b(t_push *push);
+ int	ideal_position(t_push *push, int index);
+void	cout_de_b(t_push *push);
+int		cout_chiffre_ideal(t_push *push, int index);
+int		cout_min_a_b(t_push *push);
+void	decale_a(t_push *push);
+void	decale_b(t_push *push);
+void	free_all(t_push *push);
+void	last_etape(t_push *push);
+void	remettre_zero(int *tab);
+int cout_chiffre_b(t_push *push, int index);
 
 
 // mouvement 

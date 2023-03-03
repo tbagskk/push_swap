@@ -52,8 +52,6 @@ void	pa(t_push *push)
 	write(1, "\n", 1);
 }
 
-
-
 void	depile(int *tab)
 {
 	int	i;

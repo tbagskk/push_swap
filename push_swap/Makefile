@@ -10,7 +10,11 @@ SRCS =	main.c \
 		choose_algo.c \
 		adult.c \
 		parsing.c \
-		adult_cout.c
+		adult_cout.c \
+		other2.c \
+		decale_a_b.c \
+		adult_cout2.c \
+		mouvement2.c
 	
 
 OBJS =	${SRCS:.c=.o}
