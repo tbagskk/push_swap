@@ -8,7 +8,6 @@ void decale_a(t_push *push)
 
 	i = 0;
 	size = push->size_a;
-	
 	index = push->index_a;
 	if (index > size / 2)
 	{
@@ -26,7 +25,6 @@ void decale_a(t_push *push)
 			index--;
 		}
 	}
-	index = 0;
 }
 
 void decale_b(t_push *push)
