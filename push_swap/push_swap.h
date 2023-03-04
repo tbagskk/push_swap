@@ -61,6 +61,12 @@ void	free_all(t_push *push);
 void	last_etape(t_push *push);
 void	remettre_zero(int *tab);
 int		cout_chiffre_b(t_push *push, int index);
+int		verif_tri(t_push *push);
+int		ft_isdigit(int c);
+void	remplir_a(t_push *push, int ac, char **av);
+int		verif_all(t_push *push, int ac, char **av);
+int		ft_strlen_char(char *str);
+int		ft_atoi(const char *str);
 
 // mouvement 
 

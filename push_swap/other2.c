@@ -53,3 +53,22 @@ void	tri_a_bulles(t_push *push, int taille)
 		}
 	}
 }
+
+int	ft_isdigit(int c)
+{
+	if ((c >= '0' && c <= '9') || (c == '-'))
+	{
+		return (1);
+	}
+	return (0);
+}
+
+int ft_strlen_char(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}

@@ -14,7 +14,9 @@ SRCS =	main.c \
 		other2.c \
 		decale_a_b.c \
 		adult_cout2.c \
-		mouvement2.c
+		mouvement2.c \
+		verif_tri.c \
+		other3.c
 	
 
 OBJS =	${SRCS:.c=.o}

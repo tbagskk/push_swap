@@ -27,32 +27,29 @@ void	free_all(t_push *push)
 		free(push);
 }
 
+
 int main(int ac, char **av)
 {
-	t_push *push;
-	int i;
-	int j;
-	// if(!(verif(push, av)))
-	// 	return (0);
-	push = malloc(sizeof(t_push));
-	push->a = malloc(sizeof(int) * ac - 1);
-	push->b = malloc(sizeof(int) * (ac - 1));
-	push->tab = malloc(sizeof(int) * (ac - 1));
-	push->cout = malloc(sizeof(int) * (ac - 1));
-	push->target = malloc(sizeof(int) * (ac - 1));
-	push->max_a = malloc(sizeof(int) * (ac - 1));
-
-	i = 0;
-	j = 1;
-	while (i < ac - 1)
+	if (ac > 2)
 	{
-		push->a[i] = atoi(av[j]);
-		push->size_a += 1;
-		i++;
-		j++;
+		t_push *push;
+	
+		push = malloc(sizeof(t_push));
+		push->a = malloc(sizeof(int) * ac - 1);
+		push->b = malloc(sizeof(int) * (ac - 1));
+		push->tab = malloc(sizeof(int) * (ac - 1));
+		push->cout = malloc(sizeof(int) * (ac - 1));
+		push->target = malloc(sizeof(int) * (ac - 1));
+		push->max_a = malloc(sizeof(int) * (ac - 1));
+		if (verif_all(push,ac,av))
+		{
+			ft_putstr("error");
+			write(1, "\n", 1);
+			return (0);
+		}
+		choose_algo(push, ac - 1);
+		free_all(push);
 	}
-	choose_algo(push, ac - 1);
-	free_all(push);
 	//system("leaks push_swap");
 }
 
