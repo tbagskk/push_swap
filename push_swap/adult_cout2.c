@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   adult_cout2.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gcherqui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/04 11:40:26 by gcherqui          #+#    #+#             */
+/*   Updated: 2023/03/04 11:40:27 by gcherqui         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-int cout_chiffre_ideal(t_push *push, int index)
+int	cout_chiffre_ideal(t_push *push, int index)
 {
-	int size;
-	int cout;
+	int	size;
+	int	cout;
 
 	size = push->size_a;
 	if (index < size / 2)
@@ -17,10 +29,10 @@ int cout_chiffre_ideal(t_push *push, int index)
 	return (cout);
 }
 
-int cout_chiffre_b(t_push *push, int index)
+int	cout_chiffre_b(t_push *push, int index)
 {
-	int size;
-	int cout;
+	int	size;
+	int	cout;
 
 	size = push->size_b;
 	if (index < size / 2)
@@ -34,36 +46,31 @@ int cout_chiffre_b(t_push *push, int index)
 	return (cout);
 }
 
-int cout_min_a_b(t_push *push)//cout final le moin cher, index b, index a
+int	cout_min_a_b(t_push *push)
 {
 	int	i;
-	int ideal;
+	int	ideal;
 	int	cout_ideal;
 	int	cout_b;
 	int	cout_final;
-	int index_b_final = 0;
-	int index_a_final = 0;
 
 	i = 0;
 	ideal = 0;
 	cout_ideal = 0;
-	cout_final = 3000; // a regler
+	cout_final = 5000;
 	cout_b = 0;
-	while (i < push->size_b) //parcours la stack b
+	while (i < push->size_b)
 	{
-		ideal = ideal_position(push, i); //index du chiffre ideal
-		cout_ideal = cout_chiffre_ideal(push, ideal); //du chiffre ideal
-		cout_b = cout_chiffre_b(push, i); //cout de b
+		ideal = ideal_position(push, i);
+		cout_ideal = cout_chiffre_ideal(push, ideal);
+		cout_b = cout_chiffre_b(push, i);
 		if ((cout_ideal + cout_b) < cout_final)
 		{
 			cout_final = cout_ideal + cout_b;
-			index_b_final = i;
-			index_a_final = ideal;
+			push->index_b = i;
+			push->index_a = ideal;
 		}
-			
 		i++;
 	}
-	push->index_b = index_b_final; //index de b a bouger
-	push->index_a = index_a_final; //index de a a bouger
 	return (cout_final);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   other.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gcherqui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/04 11:41:43 by gcherqui          #+#    #+#             */
+/*   Updated: 2023/03/04 11:41:44 by gcherqui         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	ft_putchar(char c)
@@ -15,7 +27,7 @@ int	ft_strlen(int *str)
 	return (i);
 }
 
-void ft_strcpy(int *dest, int *tab, int len)
+void	ft_strcpy(int *dest, int *tab, int len)
 {
 	int	i;
 
@@ -25,7 +37,6 @@ void ft_strcpy(int *dest, int *tab, int len)
 		dest[i] = tab[i];
 		i++;
 	}
-
 }
 
 void	ft_putstr(char *str)
@@ -33,7 +44,7 @@ void	ft_putstr(char *str)
 	int	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		ft_putchar(str[i]);
 		i++;
@@ -53,6 +64,5 @@ int	ft_min(int *str, int len)
 			tmp = str[i];
 		i++;
 	}
-	return(tmp);
+	return (tmp);
 }
-

@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   baby.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gcherqui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/04 11:40:35 by gcherqui          #+#    #+#             */
+/*   Updated: 2023/03/04 11:40:36 by gcherqui         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void *baby_sort(int nb[], t_push *push)
+void	*baby_sort(int nb[], t_push *push)
 {
-	int a;
-	int b;
-	int c;
-	int temp;
+	int	a;
+	int	b;
+	int	c;
+	int	temp;
 
 	a = nb[0];
 	b = nb[1];
@@ -29,14 +41,13 @@ void *baby_sort(int nb[], t_push *push)
 	return (0);
 }
 
-void two_sort(t_push *push)
+void	two_sort(t_push *push)
 {
 	int	a;
 	int	b;
 
 	a = push->a[0];
 	b = push->a[1];
-
 	if (a > b)
 		sa(push);
 }

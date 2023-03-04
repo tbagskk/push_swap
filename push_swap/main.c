@@ -9,7 +9,7 @@
 	./visualizer
 
 */
-void free_all(t_push *push)
+void	free_all(t_push *push)
 {
 	if (push->max_a)
 		free(push->max_a);
