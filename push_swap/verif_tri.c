@@ -1,18 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   verif_tri.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gcherqui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/04 18:06:23 by gcherqui          #+#    #+#             */
+/*   Updated: 2023/03/04 18:06:24 by gcherqui         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-
-int verif_tri(t_push *push) 
+int	verif_tri(t_push *push)
 {
 	int	i;
 
 	i = 0;
-	while (i < push->size_a - 1) 
+	while (i < push->size_a - 1)
 	{
-		if (push->a[i] > push->a[i + 1]) 
+		if (push->a[i] > push->a[i + 1])
 		{
-            return (0);
-        }
-        i++;
-    }
-    return (1);
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }

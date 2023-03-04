@@ -6,7 +6,7 @@
 /*   By: gcherqui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 11:34:45 by gcherqui          #+#    #+#             */
-/*   Updated: 2023/03/04 11:39:49 by gcherqui         ###   ########.fr       */
+/*   Updated: 2023/03/04 18:10:41 by gcherqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	tri_a_bulles(t_push *push, int taille)
 	int	tmp;
 	int	continuer;
 
-	i = 0;
 	j = 0;
 	tmp = 0;
 	continuer = 1;
@@ -63,7 +62,7 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-int ft_strlen_char(char *str)
+int	ft_strlen_char(char *str)
 {
 	int	i;
 

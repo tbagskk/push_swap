@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gcherqui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/04 18:03:23 by gcherqui          #+#    #+#             */
+/*   Updated: 2023/03/04 18:03:27 by gcherqui         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 /* 
@@ -27,13 +39,12 @@ void	free_all(t_push *push)
 		free(push);
 }
 
-
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
+	t_push	*push;
+
 	if (ac > 2)
 	{
-		t_push *push;
-	
 		push = malloc(sizeof(t_push));
 		push->a = malloc(sizeof(int) * ac - 1);
 		push->b = malloc(sizeof(int) * (ac - 1));
@@ -41,7 +52,7 @@ int main(int ac, char **av)
 		push->cout = malloc(sizeof(int) * (ac - 1));
 		push->target = malloc(sizeof(int) * (ac - 1));
 		push->max_a = malloc(sizeof(int) * (ac - 1));
-		if (verif_all(push,ac,av))
+		if (verif_all(push, ac, av))
 		{
 			ft_putstr("error");
 			write(1, "\n", 1);
@@ -50,6 +61,4 @@ int main(int ac, char **av)
 		choose_algo(push, ac - 1);
 		free_all(push);
 	}
-	//system("leaks push_swap");
 }
-
