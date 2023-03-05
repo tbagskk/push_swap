@@ -71,6 +71,7 @@ int			is_moin(char *str);
 int			est_chiffre(int ac, char **av);
 int			verif_sign(int ac, char **av);
 int			verif_size(int ac, char **av);
+int			display_error(t_push *push, int ac, char **av);
 
 // mouvement 
 

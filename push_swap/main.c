@@ -52,13 +52,10 @@ int	main(int ac, char **av)
 		push->cout = malloc(sizeof(int) * (ac - 1));
 		push->target = malloc(sizeof(int) * (ac - 1));
 		push->max_a = malloc(sizeof(int) * (ac - 1));
-		if (verif_all(push, ac, av))
-		{
-			ft_putstr("error");
-			write(1, "\n", 1);
+		if (display_error(push, ac, av))
 			return (0);
-		}
 		choose_algo(push, ac - 1);
 		free_all(push);
 	}
+	return (0);
 }

@@ -17,8 +17,7 @@ SRCS =	main.c \
 		mouvement2.c \
 		verif_tri.c \
 		other3.c \
-		parsing2.c
-	
+		parsing2.c	
 
 OBJS =	${SRCS:.c=.o}
 

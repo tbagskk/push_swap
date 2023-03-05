@@ -40,9 +40,20 @@ int	verif_all(t_push *push, int ac, char **av)
 	remplir_a(push, ac, av);
 	if (verif_sign(ac, av))
 		return (1);
-	if (verif_tri(push))
-		return (2);
 	if (est_doublon(push->a, push->size_a))
+		return (1);
+	return (0);
+}
+
+int	display_error(t_push *push, int ac, char **av)
+{
+	if (verif_all(push, ac, av))
+	{
+		ft_putstr("error");
+		write(1, "\n", 1);
+		return (1);
+	}
+	if (verif_tri(push))
 		return (1);
 	return (0);
 }
