@@ -6,7 +6,6 @@ Environ **620 mouvements pour 100 nombres**, et **4900 mouvement pour 500 nombre
 
 L'objectif de ce projet est de trier en un minimum d'instructions une stack de nombre.
 
-La difficulté du projet réside dans le fait que l'on peux utiliser seulement quelques mouvements précis ce qui nous limite vite.
 
 
 
